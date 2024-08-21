@@ -36,6 +36,17 @@ function changePage(){
   let found = 0
   for(let el of elems){
     text = el.innerHTML.trim()
+    if(el.className === "im-mess--text wall_module _im_log_body"){
+      const nodeVals = Array.from(el?.childNodes?.values())
+      nodeVals.forEach(nv=>{
+        if(nv.nodeType === Node.TEXT_NODE && isTextBinary(nv.textContent)){
+          const newNode = document.createElement("span")
+          newNode.innerHTML = decodeText(nv.textContent)
+          el.replaceChild(newNode, nv)
+        }
+      })
+      continue
+    }
     if(el.className === "wall_post_text" && el?.childNodes.length === 3 ){ // vk support
       const nodeVals = Array.from(el?.childNodes?.values())
       text = nodeVals[0].textContent + nodeVals[2].textContent
