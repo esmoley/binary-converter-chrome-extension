@@ -3,17 +3,25 @@
   <head>
   	<meta charset="UTF-8">
     <style type="text/css">
-    	/* задаём размеры кнопки и размер текста на кнопке  */
-    	button {
-	      font-size: 12px;
-		  height: 40px;
-		  width: 100px;
-		}
+      button {
+        height: 30px;
+        background:#078d1f;
+        color:white;
+        font-style: italic;
+        font-weight: bold;
+      }
+      div {
+        text-wrap: balance;
+      }
+      div:not(:empty){
+        padding-top:5px;
+      }
     </style>
   </head>
   <body>
   	<!-- создаём кнопку на странице -->
     <button id="decodeBtn">Расшифровать</button>
+    <div id="infoDiv"></div>
     <!-- подключаем скрипт, который обработает нажатие на эту кнопку -->
     <script src="popup.js"></script>
   </body>

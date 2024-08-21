@@ -1,6 +1,6 @@
 {
-  "name": "Decode binary info",
-  "description": "Finds binary info on the page and decodes into text",
+  "name": "Дешифратор бинарного текста",
+  "description": "Находит на странице бинарный текст и расшифровывает его",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
