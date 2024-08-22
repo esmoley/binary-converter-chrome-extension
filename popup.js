@@ -56,6 +56,7 @@ function changePage(){
           const newNode = document.createElement("span")
           newNode.innerHTML = decodeText(nv.textContent)
           el.replaceChild(newNode, nv)
+          found++
         }
       })
       continue
