@@ -1,7 +1,7 @@
 {
   "name": "Дешифратор бинарного текста",
   "description": "Находит на странице бинарный текст и расшифровывает его",
-  "version": "1.1",
+  "version": "1.1.1",
   "manifest_version": 3,
   "action": {
     "default_icon": {
